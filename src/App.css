@@ -62,6 +62,7 @@ input[type="checkbox"].switch + div {
   -webkit-transition-property: background-color, box-shadow;
   transition-property: background-color, box-shadow;
   cursor: pointer;
+
 }
 
 {/* inside OFF blue circle button container */}
@@ -73,7 +74,7 @@ input[type="checkbox"].switch + div {
 {/*inside circle button*/}
 input[type="checkbox"].switch + div > div {
   float: left;
-  width: 46px; height: 46px;
+  width: 33px; height: 40px;
   border-radius: inherit;
   background: #ffffff;
   -webkit-transition-timing-function: cubic-bezier(1,0,1,0);
