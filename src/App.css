@@ -38,8 +38,8 @@
   position: relative;
   width: 100px;
   height: 50px;
-  margin-left: 90px;
-  margin-top: 10px;
+  margin-left: 110px;
+  margin-top: 30px;
   -webkit-transform: translate3d( -50%, -50%, 0 );
   transform: translate3d( -50%, -50%, 0 );
 }
@@ -149,13 +149,13 @@ input[type="checkbox"].light  {
 
 {/* inside OFF light container */}
 input[type="checkbox"].light + div {
-  border: 1px solid #D5DCDE;
-  margin-left: 5px;
-  margin-top: -15px;
+  /*border: 1px solid #D5DCDE;*/
+  margin-left: -10px;
+  margin-top: -40px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #E8ECED;
+  background-color: #333333;
   -webkit-transition-duration: 10s;
   transition-duration: 10s;
   cursor: pointer;
@@ -173,5 +173,50 @@ input[type="checkbox"].light:checked + div {
 input[type="checkbox"].light:checked + div {
   background-color: rgba(255, 255,153, 1);
   box-shadow: 0 0 15px 10px #ffdd44;
-  opacity: .5;
+  opacity: .85;
+}
+
+
+{/* light container */}
+.room-container {
+  position: relative;
+  /*top: 50%; left: 50%;*/
+  width: 200px;
+  height:200px;
+  margin:auto;
+  background: black;
+  border: 1px solid white;
+}
+
+input[type="checkbox"].room  {
+  position: relative;
+  opacity: 0;
+}
+
+{/* inside OFF light container */}
+input[type="checkbox"].room + div {
+  /*border: 1px solid #D5DCDE;*/
+  margin-top: 40px;
+  margin-left: 80px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000;
+  -webkit-transition-duration: 10s;
+  transition-duration: 10s;
+  cursor: pointer;
+}
+
+{/* inside ON Light container */}
+input[type="checkbox"].room:checked + div {
+  /*width: 94px;*/
+  background-position: 0 0;
+  background-color: #ffffff;
+}
+
+{/* inside ON Light glowing effect */}
+input[type="checkbox"].room:checked + div {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 90px 50px #fff;
+  opacity: .95;
 }

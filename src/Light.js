@@ -42,7 +42,8 @@ class Light extends Component{
 
         return(
             <div className="box-container">
-
+            <div className="room-container">
+               <input ref="room" checked={ this.state.isOn } onChange={ this.handleChange } className="room" type="checkbox" />
               {/* light, checkbox input is controlled by css */}
               {/*<div style={sectionStyle} className="light-container">*/}
               <div className="light-container">
@@ -67,6 +68,7 @@ class Light extends Component{
                           </div>
                       </div>
                   </label>
+              </div>
               </div>
             </div>
         );
