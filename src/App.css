@@ -13,22 +13,29 @@
   color: white;
 }
 
-.box-container {
-  height: 180px;
-  width: 180px;
-  /* border: 1px solid; */
+{/* add and remove button container */}
+.button-container{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
+{/* light and switch box container */}
+.box-container {
+  height: 200px;
+  width: 200px;
+}
+
+{/* Light & switch box list container */}
 .screen-container{
   display : flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 {/* swith container */}
 .switch-container {
   position: relative;
-  /*top: 50%; left: 50%;*/
   width: 100px;
   height: 50px;
   margin-left: 90px;
@@ -37,6 +44,7 @@
   transform: translate3d( -50%, -50%, 0 );
 }
 
+{/* off switch */}
 input[type="checkbox"].switch  {
   position: relative;
   opacity: 0;
@@ -62,7 +70,7 @@ input[type="checkbox"].switch + div {
   height: 48px;
 }
 
-/*inside circle button*/
+{/*inside circle button*/}
 input[type="checkbox"].switch + div > div {
   float: left;
   width: 46px; height: 46px;
@@ -80,6 +88,7 @@ input[type="checkbox"].switch + div > div {
   padding: 5px 1px 1px 11px;
 }
 
+{/*inside circle button white background*/}
 input[type="checkbox"].switch + div span {
   position: relative;
   font-size: 1.6rem;
@@ -87,6 +96,7 @@ input[type="checkbox"].switch + div span {
   margin-top: 12px;
 }
 
+{/*inside circle button start and end position*/}
 input[type="checkbox"].switch + div span:nth-child( 1 ) {
     margin-left: 15px;
 }
@@ -94,8 +104,6 @@ input[type="checkbox"].switch + div span:nth-child( 1 ) {
 input[type="checkbox"].switch + div span:nth-child( 2 ) {
     margin-left: 55px;
 }
-
-
 
 {/* inside ON green container */}
 input[type="checkbox"].switch:checked + div {
@@ -117,45 +125,52 @@ input[type="checkbox"].switch:checked + div > div {
   background-color: #ffffff;
 }
 
+{/* inside ON white circle button container */}
 input[type="checkbox"].switch:checked + div > div {
   -webkit-transform: translate3d(46px, 0, 0);
   transform: translate3d(46px, 0, 0);
 }
 
 
-/*input[type="checkbox"].bigswitch.switch + div > div {
-  width: 44px;
-  height: 44px;
-  margin-top: 1px;
-}
-*/
-
-
-.light-bulb {
-    border-radius: 50%; 
-    width: 50px;
-    height: 50px;
-    margin: auto;
+{/* light container */}
+.light-container {
+  position: relative;
+  /*top: 50%; left: 50%;*/
+  width: 100px;
+  height:100px;
+  margin:auto;
 }
 
-.light-bulb.on {
-    background-color: #ffdd44;
-    position: relative;
+input[type="checkbox"].light  {
+  position: relative;
+  opacity: 0;
 }
 
-.light-bulb.on:after {
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    width: 5px;
-    height: 5px;
-    /* border-radius: 50%; */
-    background-color: rgba(255, 255,255, 1);
-    box-shadow: 0 0 15px 10px #fff;
-    opacity: .85;
+{/* inside OFF light container */}
+input[type="checkbox"].light + div {
+  border: 1px solid #D5DCDE;
+  margin-left: 5px;
+  margin-top: -15px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #E8ECED;
+  -webkit-transition-duration: 10s;
+  transition-duration: 10s;
+  cursor: pointer;
 }
 
-.light-bulb.off {
-  background-color: #888;
+{/* inside ON Light container */}
+input[type="checkbox"].light:checked + div {
+  border: 5px solid #ffdd44;
+  /*width: 94px;*/
+  background-position: 0 0;
+  background-color: #ffdd44;
+}
+
+{/* inside ON Light glowing effect */}
+input[type="checkbox"].light:checked + div {
+  background-color: rgba(255, 255,153, 1);
+  box-shadow: 0 0 15px 10px #ffdd44;
+  opacity: .85;
 }
