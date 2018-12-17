@@ -173,5 +173,5 @@ input[type="checkbox"].light:checked + div {
 input[type="checkbox"].light:checked + div {
   background-color: rgba(255, 255,153, 1);
   box-shadow: 0 0 15px 10px #ffdd44;
-  opacity: .85;
+  opacity: .5;
 }
